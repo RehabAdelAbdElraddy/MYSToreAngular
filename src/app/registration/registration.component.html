@@ -1,0 +1,34 @@
+<form #signup="ngForm">
+ 
+    <div class="container" >
+    <h1 class="registerheader">Register</h1>
+    <div class="form-row">
+       
+    <div class="form-group col-6">
+            <!-- <label for="name">Name</label> -->
+            <input  class="form-control" placeholder="Username"  type="text" [(ngModel)]="user.name" name="name" required #name="ngModel">
+                <div *ngIf="name.touched && name.errors?.required" class="errormessage">*Name is required</div>
+            </div>
+          
+    </div>
+    <div class="form-row">
+        <div class="form-group col-6">
+            <!-- <label for="address">address</label> -->
+            <input type="text" class="form-control" placeholder="Address" [(ngModel)]="user.address" name="address" required #address="ngModel">
+                <div *ngIf="address.touched && address.errors?.required" class="errormessage">*Address is required</div>
+            </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-6">
+            <!-- <label for="membership">membership</label> -->
+            <input type="text" class="form-control" [(ngModel)]="user.membership" name="membership"  #membership="ngModel" readonly>
+               
+            </div>
+    </div>
+
+    <div class="form-group">
+        <button  class="btn btn-primary" (click)="register()">Register</button>
+
+    </div>
+    </div>
+</form>

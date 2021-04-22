@@ -1,0 +1,15 @@
+<div class="container wrapper">
+
+    <figure  class="figure"  *ngFor="let item of Productslist;let i=index">
+        <img src="../../assets/15a.jpg" class="figure-img img-fluid rounded img" alt="error in loading image">
+        <figcaption #selecteditem  class="figure-caption caption">{{item.product_name}}</figcaption>
+        <figcaption class="figure-caption caption">Quantity: {{item.product_quantity}}</figcaption>
+        <figcaption class="figure-caption caption">Price: {{item.product_price}}$</figcaption>
+        <figcaption class="figure-caption caption lastcaption">Category1: {{item.product_category}}</figcaption>
+        <figcaption *ngIf="(item.Sold_out==1)" class="figure-caption SoldOut">Sold_out</figcaption>
+        <button  class="btn btn-primary btn-group-lg" (click)='showpopup(item)'>Add To card Now</button>
+      </figure>
+
+</div>
+
+<!-- <app-popup *ngIf="flag"></app-popup> -->

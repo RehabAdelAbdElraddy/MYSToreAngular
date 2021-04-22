@@ -1,0 +1,39 @@
+.productcontainer{
+    width: 100%;
+    border-width: 2px;
+    border-color: black;
+    background-color: #fff;
+    border-style: double;
+    padding: initial;
+
+}
+.img{
+    width: 50%;
+}
+.descriptiondiv{
+
+    width: 50%;
+}
+.caption{
+    font-weight: bold;
+    font-size: larger;
+}
+figure{
+    width:50%;
+    float:left;
+    margin:0px;
+    text-align:center;
+    padding:0px;
+    margin-bottom: 70px;
+}
+.wrapper{
+    margin-top: 70px;
+}
+.lastcaption{
+    margin-bottom: 5px;
+}
+.SoldOut
+{
+    color: red;
+    margin-bottom: 5px;
+}

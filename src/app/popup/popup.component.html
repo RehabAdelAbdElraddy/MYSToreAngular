@@ -1,0 +1,17 @@
+<div class="container bg">
+    <p>Enter the Quantity you want to purshace from {{selectedproducts.product_name}}</p>
+<input min="0" [max]="selectedproducts.product_quantity" type="number" [(ngModel)]='qnty' class="form-control" placeholder="Quantity"  name="Qnty"  #Qnty="ngModel">
+
+<p>Price: {{selectedproducts.product_price*Qnty.value}}$</p>
+<p>Discount: {{discount}}%</p>
+<p>Total price after discount: {{(selectedproducts.product_price*Qnty.value)-((selectedproducts.product_price*Qnty.value)*discount/100)}}</p>
+<div class="form-group ">
+    <button  class="btn btn-primary purshacbtn" (click)="Purchase()">Purchase</button>
+</div>
+</div>
+<!--Sold_out: null
+product_category: "Bags"
+product_id: 2
+product_name: "Red Bag"
+product_price: 200
+product_quantity: 20  -->
